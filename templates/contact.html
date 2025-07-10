@@ -3,40 +3,39 @@
 {% block title %}ติดต่อเรา - เกษตรกร{% endblock title %}
 
 {% block content %}
-<div class="container mt-5">
+<div class="container mt-5 mb-5">
     <div class="row justify-content-center">
-        <div class="col-md-8 col-lg-6">
-            <div class="card shadow-sm farmer-theme-card">
-                <div class="card-header bg-success text-white">
-                    <h4 class="mb-0">ติดต่อเรา <span style="font-size:1.2em;">🌾</span></h4>
-                </div>
+        <div class="col-md-8">
+            <div class="card shadow-sm">
                 <div class="card-body">
-                    <form method="post">
-                        {% csrf_token %}
+                    <h2 class="card-title mb-4 text-center">ติดต่อเรา</h2>
+                    <p class="lead">หากคุณมีข้อสงสัย ข้อเสนอแนะ หรือปัญหาใด ๆ สามารถติดต่อเราได้ผ่านช่องทางดังต่อไปนี้</p>
+                    <hr>
+                    <ul class="list-unstyled mb-4">
+                        <li><strong>อีเมล:</strong> <a href="mailto:info@example.com">info@example.com</a></li>
+                        <li><strong>โทรศัพท์:</strong> 02-123-4567</li>
+                        <li><strong>ที่อยู่:</strong> 123 หมู่ 4 ตำบลเกษตร อำเภอเมือง จังหวัดเกษตร 12345</li>
+                    </ul>
+                    <hr>
+                    <h4>แบบฟอร์มติดต่อ</h4>
+                    <form>
                         <div class="mb-3">
-                            <label for="name" class="form-label" style="color:#388e3c; font-weight:bold;">ชื่อ</label>
-                            <input type="text" class="form-control" id="name" name="name" required style="border:1.5px solid #a5d6a7; background:#f1f8e9;">
+                            <label for="name" class="form-label">ชื่อของคุณ</label>
+                            <input type="text" class="form-control" id="name" placeholder="กรอกชื่อของคุณ">
                         </div>
                         <div class="mb-3">
-                            <label for="email" class="form-label" style="color:#388e3c; font-weight:bold;">อีเมล</label>
-                            <input type="email" class="form-control" id="email" name="email" required style="border:1.5px solid #a5d6a7; background:#f1f8e9;">
+                            <label for="email" class="form-label">อีเมล</label>
+                            <input type="email" class="form-control" id="email" placeholder="example@email.com">
                         </div>
                         <div class="mb-3">
-                            <label for="message" class="form-label" style="color:#388e3c; font-weight:bold;">ข้อความ</label>
-                            <textarea class="form-control" id="message" name="message" rows="4" required style="border:1.5px solid #a5d6a7; background:#f1f8e9;"></textarea>
+                            <label for="message" class="form-label">ข้อความ</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="พิมพ์ข้อความของคุณ"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-success w-100" style="background:#388e3c; border:none; font-weight:bold;">ส่งข้อความ</button>
+                        <button type="submit" class="btn btn-primary">ส่งข้อความ</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<style>
-.farmer-theme-card {
-    background: linear-gradient(135deg, #e8f5e9 60%, #fffde7 100%);
-    border: 2px solid #a5d6a7;
-    box-shadow: 0 4px 24px 0 rgba(56, 142, 60, 0.15);
-}
-</style>
 {% endblock content %}

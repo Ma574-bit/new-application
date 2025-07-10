@@ -4,38 +4,44 @@
 {% block title %}หน้าแรก - เกษตรกร{% endblock title %}
 
 {% block content %}
-<div class="container py-5">
-    <div class="row justify-content-center">
-        <div class="col-md-8 col-lg-7">
-            <div class="card shadow-lg border-0 farmer-theme-card text-center">
-                <div class="card-header border-0" style="background: #fffde7;">
-                    <img src="{% static 'assets/img/โลโก้.jpg' %}" alt="โลโก้เกษตรกร" class="img-fluid rounded-circle shadow mb-3" style="width: 140px; height: 140px; object-fit: cover; border: 5px solid #a5d6a7; background: #fff;">
-                    <h2 class="mb-2 mt-2" style="letter-spacing:0.1em; color:#388e3c; font-weight:bold; text-shadow:0 0 10px #a5d6a7;">
-                        เกษตรกรรุ่นใหม่ <span style="font-size:1.5em; margin-left:10px;">🌱</span>
-                    </h2>
-                </div>
+<div class="container mt-5">
+    <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+            <h1 class="display-4 fw-bold mb-3">ยินดีต้อนรับสู่เว็บไซต์เกษตรกร</h1>
+            <p class="lead">แหล่งรวมความรู้ ข่าวสาร และเทคโนโลยีสำหรับเกษตรกรไทย เพื่อการพัฒนาและยกระดับอาชีพเกษตรกรรม</p>
+            <a href="{% url 'about' %}" class="btn btn-success btn-lg mt-3">เรียนรู้เพิ่มเติมเกี่ยวกับเรา</a>
+        </div>
+        <div class="col-md-6 text-center">
+            <img src="{% static 'assets/img/โลโก้.jpg' %}" alt="โลโก้เกษตรกร" class="img-fluid rounded shadow" style="max-height: 320px;">
+        </div>
+    </div>
+    <hr class="my-5">
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 border-success">
                 <div class="card-body">
-                    <p class="fs-4 mb-2" style="color:#388e3c; font-weight:bold;">Mr.Nattapon Boonnara</p>
-                    <p class="fs-5 mb-2" style="color:#6d4c22;">รหัสนิสิต: 6712732105</p>
-                    <p class="fs-5 mb-2" style="color:#388e3c;">คณะ: ศิลปศาสตร์และวิทยาศาสตร์</p>
-                    <p class="fs-5 mb-2" style="color:#6d4c22;">สาขา: วิทยาการคอมพิวเตอร์</p>
-                    <p class="fs-5 mb-2" style="color:#388e3c;">ชั้นปีที่ 2</p>
-                    <hr style="border-color:#a5d6a7;">
-                    <p class="fs-6 mb-0" style="color:#388e3c; font-style:italic;">"เติบโตไปกับธรรมชาติและเทคโนโลยี"</p>
+                    <h5 class="card-title">บทความความรู้</h5>
+                    <p class="card-text">ติดตามบทความและเทคนิคการเกษตรที่ทันสมัย เพื่อเพิ่มผลผลิตและลดต้นทุน</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 border-primary">
+                <div class="card-body">
+                    <h5 class="card-title">ข่าวสารและกิจกรรม</h5>
+                    <p class="card-text">อัปเดตข่าวสาร กิจกรรม และโครงการดี ๆ สำหรับเกษตรกรไทย</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 border-warning">
+                <div class="card-body">
+                    <h5 class="card-title">ติดต่อและให้คำปรึกษา</h5>
+                    <p class="card-text">สอบถามข้อมูลหรือขอคำปรึกษาด้านการเกษตรกับทีมงานผู้เชี่ยวชาญของเรา</p>
+                    <a href="{% url 'contact' %}" class="btn btn-outline-warning mt-2">ติดต่อเรา</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<style>
-.farmer-theme-card {
-    background: linear-gradient(135deg, #e8f5e9 60%, #fffde7 100%);
-    border: 2px solid #a5d6a7;
-    box-shadow: 0 4px 24px 0 rgba(56, 142, 60, 0.15);
-    transition: box-shadow 0.3s;
-}
-.farmer-theme-card:hover {
-    box-shadow: 0 8px 32px 0 rgba(56, 142, 60, 0.25);
-}
-</style>
 {% endblock content %}
